@@ -1,0 +1,61 @@
+@media print {
+    /* ========================================================
+       1. INI KUNCI MENGHILANGKAN TANGGAL & LOCALHOST BROWSER 
+       ======================================================== */
+    @page { 
+        size: A4 portrait; 
+        margin: 0; /* Margin 0 akan mematikan paksa header & footer bawaan browser */
+    }
+
+    /* ========================================================
+       2. ATUR BODY AGAR KONTEN TIDAK MEPET KE UJUNG KERTAS 
+       ======================================================== */
+    body { 
+        padding: 2cm !important; /* Sebagai pengganti margin kertas */
+        background-color: white !important; 
+        -webkit-print-color-adjust: exact !important; /* Memaksa warna tabel & badge muncul di PDF */
+        print-color-adjust: exact !important;
+        color: black !important;
+    }
+
+    /* Sembunyikan Sidebar, Navbar, Tombol, dan Kolom Aksi saat cetak */
+    #sidebar, .navbar, .top-nav, .btn, .breadcrumb, .card-header i, .aksi-kolom {
+        display: none !important;
+    }
+
+    /* Lebarkan area konten */
+    .main-content, #content, .wrapper {
+        display: block !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Bersihkan Card agar terlihat seperti kertas biasa */
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+        margin-top: 15px !important;
+    }
+    
+    /* Sembunyikan Header Card warna biru saat di print */
+    .card-header {
+        display: none !important;
+    }
+
+    /* Percantik Tabel Khusus untuk PDF */
+    table { 
+        border-collapse: collapse !important; 
+        width: 100% !important; 
+    }
+    th, td { 
+        border: 1px solid #000 !important; 
+        padding: 12px 8px !important; 
+        color: black !important; 
+    }
+    thead th { 
+        background-color: #e9ecef !important; 
+        text-align: center !important; 
+        font-weight: bold !important; 
+    }
+}
