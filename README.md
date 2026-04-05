@@ -16,12 +16,12 @@ This project was developed as a course project by Group 9.
 
 ## 🚀 Key Features
 
-✅ **Interactive Dashboard**: Displays a summary of total data and a brief literature guide on the MABAC method.
-✅ **Alternative Data Management**: CRUD operations for managing student data (candidates) and directly inputting their evaluation scores.
-✅ **Criteria Management**: Configuration for assessment parameters, allowing administrators to define the weight (W) and attribute type (Benefit or Cost).
-✅ **Transparent Calculation Engine**: A step-by-step display of the MABAC methodology.
-✅ **Final Result & Ranking**: Automatically generates a ranked list classifying candidates as eligible or not eligible.
-✅ **Secure User Management**: Admin access control with MD5 encrypted passwords.
+* ✅ **Interactive Dashboard**: Displays a summary of total data and a brief literature guide on the MABAC method.
+* ✅ **Alternative Data Management**: CRUD operations for managing student data (candidates) and directly inputting their evaluation scores.
+* ✅ **Criteria Management**: Configuration for assessment parameters, allowing administrators to define the weight (W) and attribute type (Benefit or Cost).
+* ✅ **Transparent Calculation Engine**: A step-by-step display of the MABAC methodology.
+* ✅ **Final Result & Ranking**: Automatically generates a ranked list classifying candidates as eligible or not eligible.
+* ✅ **Secure User Management**: Admin access control with MD5 encrypted passwords.
 
 ---
 
@@ -78,8 +78,8 @@ The initial representation of alternative values against each criterion.
 
 ### 4. Normalized Matrix (N)
 Normalizing the decision matrix to equalize the scale based on the criteria type (Benefit or Cost).
-* **Benefit Formula:** $n_{ij}=\frac{x_{ij}-x^{-}_{j}}{x^{+}_{j}-x^{-}_{j}}$
-* **Cost Formula:** $n_{ij}=\frac{x_{ij}-x^{+}_{j}}{x^{-}_{j}-x^{+}_{j}}$
+* **Benefit Formula:** $$n_{ij}=\frac{x_{ij}-x^{-}_{j}}{x^{+}_{j}-x^{-}_{j}}$$
+* **Cost Formula:** $$n_{ij}=\frac{x_{ij}-x^{+}_{j}}{x^{-}_{j}-x^{+}_{j}}$$
 
 | Alternative | C1 | C2 | C3 | C4 | C5 |
 | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -90,7 +90,8 @@ Normalizing the decision matrix to equalize the scale based on the criteria type
 | **A5** | 1.0000 | 1.0000 | 0.3333 | 1.0000 | 0.0000 |
 
 ### 5. Weighted Matrix (V)
-Multiplying the normalized value by the criteria weight plus the weight itself. Formula: $v_{ij}=w_{j}\cdot(n_{ij}+1)$
+Multiplying the normalized value by the criteria weight plus the weight itself. 
+* **Formula:** $$v_{ij}=w_{j}\cdot(n_{ij}+1)$$
 
 | Alternative | C1 | C2 | C3 | C4 | C5 |
 | :--- | :---: | :---: | :---: | :---: | :---: |
